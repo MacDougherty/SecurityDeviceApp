@@ -12,7 +12,7 @@ Apiotics.configure do |config|
 	config.heroku = false
   
   # The remote port at Apiotics to initially connect to.  There should be very few reasons to change this.
-  config.server_port = 9000
+  config.server_port = 8000
   
   # The Apiotics portal.  Again, very few reasons to change this.
   config.portal = "https://portal.apiotics.com/"
