@@ -18,11 +18,11 @@ $(document).ready ->
 			# console.log sound.text()
 			# console.log vibration.text()
 			# console.log parseInt( sound.text(), 10 ) > 100
-			console.log motion.text() == "true" or parseInt( sound.text(), 10 ) > 100 or vibration.text() == "true"
+			# console.log motion.text() == "true" or parseInt( sound.text(), 10 ) > 100 or vibration.text() == "true"
 			if motion.text() == "true" or parseInt( sound.text(), 10 ) > 100 or vibration.text() == "true"
-				tr.css("background-color", "#ff0000 !important")
+				tr.css("background-color", "#ff0000")
 			else
-				tr.css("background-color", "#ffffff !important")
+				tr.css("background-color", "#ffffff")
 			# Called when there's incoming data on the websocket for this channel
 			return
 	)
