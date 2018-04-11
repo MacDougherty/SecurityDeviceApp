@@ -1,0 +1,3 @@
+Apiotics.configure do |config|
+  config.parents = {"MedicalDevice"=>{"Buzzer"=>{}, "FourDigitDisplay"=>{}, "GalvanicSkinResponseSensor"=>{}, "HeartRateSensor"=>{}}, "StarterKit"=>{"FourDigitDisplay"=>{}, "Potentiometer"=>{}}, "SecurityDevice"=>{"MotionSensor"=>{}, "SoundSensor"=>{}, "VibrationSensor"=>{}}, "MaintenanceDevice"=>{"ElectricitySensor"=>{}, "MagneticFieldSensor"=>{}, "VibrationSensor"=>{}}}
+end

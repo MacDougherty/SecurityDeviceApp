@@ -1,0 +1,94 @@
+<%= simple_form_for(@security_device, url: security_device_path(@security_device)) do |form| %>
+  <table>
+    <tr>
+      <th>
+        Id
+      </th>
+      <td>
+        <%= @security_device.apiotics_instance %>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Name
+      </th>
+      <td>
+          <%= @security_device.name %>
+      </td>
+    </tr>
+    
+      <tr>
+        <th>
+          MotionSensor
+        </th>
+        <%= form.simple_fields_for :motion_sensor do |fields| %>
+					 <td>
+          	
+							
+							
+	              	<%= fields.input :port_number, collection: ["J5", "J6", "J7", "J8", "J9", "J10"] %>
+							
+          	
+							
+							
+								<%= fields.input :motion %>
+							
+          	
+					</td>
+        <% end %>
+      </tr>
+    
+      <tr>
+        <th>
+          SoundSensor
+        </th>
+        <%= form.simple_fields_for :sound_sensor do |fields| %>
+					 <td>
+          	
+							
+							
+	              	<%= fields.input :port_number, collection: ["J5", "J6", "J7", "J8", "J9", "J10"] %>
+							
+          	
+							
+							
+								<%= fields.input :data %>
+							
+          	
+					</td>
+        <% end %>
+      </tr>
+    
+      <tr>
+        <th>
+          VibrationSensor
+        </th>
+        <%= form.simple_fields_for :vibration_sensor do |fields| %>
+					 <td>
+          	
+							
+							
+	              	<%= fields.input :port_number, collection: ["J5", "J6", "J7", "J8", "J9", "J10", "J11"] %>
+							
+          	
+							
+							
+								<%= fields.input :threshold_exceeded %>
+							
+          	
+					</td>
+        <% end %>
+      </tr>
+    
+      <tr>
+        <th>
+          &nbsp;
+        </th>
+        <td>
+          <div class="actions">
+            <%= form.submit %>
+          </div>
+        </td>
+      </tr>
+  </table>
+<% end %>

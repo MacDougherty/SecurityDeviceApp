@@ -1,0 +1,4 @@
+require 'simple_form'
+Apiotics.configure do |config|
+  config.targets = {"MedicalDevice"=>{"Buzzer"=>["buzzer", "port_number"], "FourDigitDisplay"=>["clock", "display", "port_number"], "GalvanicSkinResponseSensor"=>["data", "port_number"], "HeartRateSensor"=>["data", "port_number"]}, "StarterKit"=>{"FourDigitDisplay"=>["clock", "display", "port_number"], "Potentiometer"=>[]}, "SecurityDevice"=>{"MotionSensor"=>["port_number", "motion"], "SoundSensor"=>["port_number", "data"], "VibrationSensor"=>["port_number", "threshold_exceeded"]}, "MaintenanceDevice"=>{"ElectricitySensor"=>["current"], "MagneticFieldSensor"=>["port_number", "active"], "VibrationSensor"=>["port_number", "threshold_exceeded"]}}
+end

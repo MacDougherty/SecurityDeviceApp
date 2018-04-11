@@ -1,0 +1,3 @@
+class ApioticsSetting < ApplicationRecord
+
+end

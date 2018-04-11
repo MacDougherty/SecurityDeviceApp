@@ -1,0 +1,112 @@
+<p id="notice"><%= notice %></p>
+<h1>
+  SecurityDevice
+</h1>
+<table>
+  <thead>
+    <tr>
+      <th style="border: 1px solid black;">
+        Id
+      </th>
+      <th style="border: 1px solid black;">
+        Name
+      </th>
+      
+        <th colspan='2' style="border: 1px solid black;">
+          MotionSensor
+        </th>
+      
+        <th colspan='2' style="border: 1px solid black;">
+          SoundSensor
+        </th>
+      
+        <th colspan='2' style="border: 1px solid black;">
+          VibrationSensor
+        </th>
+      
+    </tr>
+    <tr>
+      <th>
+        &nbsp;
+      </th>
+      <th>
+        &nbsp;
+      </th>
+      
+        
+          <th>
+            port_number
+          </th>
+        
+          <th>
+            motion
+          </th>
+        
+      
+        
+          <th>
+            port_number
+          </th>
+        
+          <th>
+            data
+          </th>
+        
+      
+        
+          <th>
+            port_number
+          </th>
+        
+          <th>
+            threshold_exceeded
+          </th>
+        
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='<%= @security_device.apiotics_instance %>'>
+      <td>
+        <%= @security_device.apiotics_instance %>
+      </td>
+      <td>
+        <%= @security_device.name %>
+      </td>
+      
+        
+          <td class='security_device-motion_sensor-port_number'>
+            <%= @security_device.motion_sensor.port_number %>
+          </td>
+        
+          <td class='security_device-motion_sensor-motion'>
+            <%= @security_device.motion_sensor.motion %>
+          </td>
+        
+      
+        
+          <td class='security_device-sound_sensor-port_number'>
+            <%= @security_device.sound_sensor.port_number %>
+          </td>
+        
+          <td class='security_device-sound_sensor-data'>
+            <%= @security_device.sound_sensor.data %>
+          </td>
+        
+      
+        
+          <td class='security_device-vibration_sensor-port_number'>
+            <%= @security_device.vibration_sensor.port_number %>
+          </td>
+        
+          <td class='security_device-vibration_sensor-threshold_exceeded'>
+            <%= @security_device.vibration_sensor.threshold_exceeded %>
+          </td>
+        
+      
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_security_device_path(@security_device) %> |
+<%= link_to 'Back', security_devices_path %>
