@@ -74,7 +74,11 @@
   </thead>
   <tbody>
     <% @security_devices.each do |object| %>
-      <tr id='<%= object.apiotics_instance %>'>
+      <% if object.motion_sensor.motion == true || object.sound_sensor.data > 100 || object.vibration_sensor.threshold_exceeded == true %>
+        <tr id='<%= object.apiotics_instance %>' style="background-color: #ff0000 !important;">
+      <% else %>
+        <tr id='<%= object.apiotics_instance %>'>
+      <% end %> 
         <td>
           <%= object.apiotics_instance %>
         </td>
