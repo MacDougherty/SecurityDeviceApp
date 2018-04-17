@@ -43,7 +43,7 @@ Note: For the `live_update` branch and the `live_update_red` branch, you will ne
 3. If you are using Linux, uncomment the following line in the Gemfile:
 `# gem 'mini_racer', platforms: :ruby`.
 
-4. Run 'rake db:migrate`.
+4. Run `rake db:migrate`.
 
 5. To start communication with the web app, run `rake dev_comms:start`.
 
