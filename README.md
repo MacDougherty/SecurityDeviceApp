@@ -36,24 +36,26 @@ Note: For the `live_update` branch and the `live_update_red` branch, you will ne
 
 ## Implementation
 
-1. Decide which branch in the repository has the functionality you want, and clone it onto your local machine.
+1. If you don't already have bundler installed, run `gem install bundler` then run `bundle`.
 
-2. If you are using Linux, uncomment the following line in the Gemfile:
-`# gem 'mini_racer', platforms: :ruby`
+2. Decide which branch in the repository has the functionality you want, and clone it onto your local machine.
 
-3. Run 'rake db:migrate`.
+3. If you are using Linux, uncomment the following line in the Gemfile:
+`# gem 'mini_racer', platforms: :ruby`.
 
-4. To start communication with the web app, run `rake dev_comms:start`.
+4. Run 'rake db:migrate`.
 
-5. If you are using the live_update or live_app_update branch and want to see the values update automatically, you will need to start a redis server by opening a new terminal and running `redis-server`.  Leave this terminal open in the background.  If you are using the `master` or `app_update` branch, skip this step.
+5. To start communication with the web app, run `rake dev_comms:start`.
 
-6. To start your Rails server, run `rails server` (or `rails s`).
+6. If you are using the live_update or live_app_update branch and want to see the values update automatically, you will need to start a redis server by opening a new terminal and running `redis-server`.  Leave this terminal open in the background.  If you are using the `master` or `app_update` branch, skip this step.
 
-7. To see the web app, browse to <http://localhost:3000/security_devices>.
+7. To start your Rails server, run `rails server` (or `rails s`).
+
+8. To see the web app, browse to <http://localhost:3000/security_devices>.
 
 Note: 
 If you decide to modify any code in the rails app, you will need to run `dev_comms:restart` (or `dev_comms:stop` then `dev_comms:start`) in order to see the updated functionality on the web app. 
 
-## References
+## More Info
 * [Ruby on Rails Apiotics Gem](https://portal.apiotics.com/docs/4)
 * [Security Device page in Apiotics Portal](https://portal.apiotics.com/workers/108)
