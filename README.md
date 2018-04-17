@@ -36,12 +36,12 @@ Note: For the `live_update` branch and the `live_update_red` branch, you will ne
 
 ## Implementation
 
-1. If you don't already have bundler installed, run `gem install bundler` then run `bundle`.
+1. Decide which branch in the repository has the functionality you want, and clone it onto your local machine.
 
-2. Decide which branch in the repository has the functionality you want, and clone it onto your local machine.
-
-3. If you are using Linux, uncomment the following line in the Gemfile:
+2. If you are using Linux, uncomment the following line in the Gemfile:
 `# gem 'mini_racer', platforms: :ruby`.
+
+3. If you don't already have bundler installed, run `gem install bundler` then run `bundle`.
 
 4. Run `rake db:migrate`.
 
